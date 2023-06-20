@@ -1,6 +1,6 @@
 pipeline
 {
-  agnt { label 'redhat-node' }
+  agent { label 'redhat-node' }
   stages
   {
     stage('first')
