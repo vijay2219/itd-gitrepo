@@ -23,5 +23,10 @@ echo "you will see it if there is a change in status from previous run i.e if pr
 fixed{
 echo " you will see this if previous is failed and now it is sucess"
 }
+cleanup
+{
+echo"runs after every post condition is run"
+}
+
   }
 }
