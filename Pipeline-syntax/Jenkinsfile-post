@@ -1,0 +1,20 @@
+pipeline
+{
+  agent { label 'redhat-node' }
+  stages
+  {
+    stage('first')
+    {
+      steps
+      {
+        echo "this is 1st step"
+      }
+    }
+  }
+    post {
+      always
+      {
+        echo "this is independent of status of job"
+      }
+  }
+}
