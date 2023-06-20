@@ -1,0 +1,20 @@
+pipeline
+{
+  agent none
+  stages {
+    stage('parallel')
+    {
+      parallel
+      {
+        stage('first')
+        {
+          echo "this is 1st satge to run in parallel"
+        }
+        stage('second')
+        {
+          echo "this is 2nd satge to run in parallel"
+      }
+    }
+  }
+}
+}
