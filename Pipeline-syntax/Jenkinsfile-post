@@ -18,7 +18,10 @@ pipeline
       }
 changed
 {
-echo "you will see it if there is a change in status from previous run"
+echo "you will see it if there is a change in status from previous run i.e if previous build status is different from present (2 and 3)"
+}
+fixed{
+echo " you will see this if previous is failed and now it is sucess
 }
   }
 }
