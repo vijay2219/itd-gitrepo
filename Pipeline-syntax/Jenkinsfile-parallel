@@ -8,11 +8,13 @@ pipeline
       {
         stage('first')
         {
+agent any
           echo "this is 1st satge to run in parallel"
         }
         stage('second')
         {
-          echo "this is 2nd satge to run in parallel"
+         agent { label 'redhat-node'} 
+echo "this is 2nd satge to run in parallel"
       }
     }
   }
