@@ -1,6 +1,6 @@
 pipeline
 {
-  agent { label 'redhat-node' }
+  agnt { label 'redhat-node' }
   stages
   {
     stage('first')
@@ -16,5 +16,9 @@ pipeline
       {
         echo "this is independent of status of job"
       }
+changed
+{
+echo "you will see it if there is a change in status from previous run"
+}
   }
 }
