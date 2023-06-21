@@ -1,0 +1,25 @@
+pipeline
+{
+    agent { label 'redhat-node' }
+     environment {
+  SEE="environment-variable"
+}
+
+    stages
+    {
+        stage('environ'){
+         steps
+        {
+            script
+            {
+                SEE="checking to change env variable"
+                SECRET=credentials('secret_text')
+                SECRET_FILE=credentials('secret_file')
+                SSH_USERNAME_PPKKEY=credential('ssh_pipeline_key')
+            }
+            echo "${env.SEE}"
+            echo "${SECRET}"
+        }
+        }
+    }
+}
