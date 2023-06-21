@@ -19,6 +19,7 @@ pipeline
             }
             echo "${env.SEE}"
             echo "${SECRET}"
+// you cannot do echo to check the username ppk key you can just use it
         }
         }
     }
