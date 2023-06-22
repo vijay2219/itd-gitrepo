@@ -9,9 +9,9 @@ pipeline {
         stage ('Build-Maven') {
             steps {
                 sh '''
-                    cd ./maven/simple-war/
+                    cd ./itd-gitrepo/maven/simple-war/
                     mvn clean package
-                    cd ./target/
+                    cd ./itd-gitrepo/maven/simple-war/target/
                     ls
                 '''
             }
