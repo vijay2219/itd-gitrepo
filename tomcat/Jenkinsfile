@@ -9,9 +9,10 @@ pipeline {
         stage ('Build-Maven') {
             steps {
                 sh '''
-                    cd ./maven/simple-war/
+                    cd ./maven/simple-war/ 
+                    // here we cd to ./maven instead of ./itd-gitrepo because this pipeline will look for /home/ubuntu/workspace/nameofpipeline and execute in it
                     mvn clean package
-                    cd ./target/
+                    cd ./target/ 
                     ls
                 '''
             }
