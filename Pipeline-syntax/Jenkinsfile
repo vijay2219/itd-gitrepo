@@ -25,6 +25,13 @@ pipeline
             sh "ls -lrt"
             }
         }
+        stage('success')
+        {
+            steps
+            {
+                echo 'this is the stage to tell everything is scucess'
+            }
+        }
     }
 }
 
