@@ -1,8 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name:my-pod
+  name: my-pod
 spec:
-  - name: pod
-    image: nginx
-    containerport: 80
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
