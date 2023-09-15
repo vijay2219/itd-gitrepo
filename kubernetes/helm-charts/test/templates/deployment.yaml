@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 name : {{ .Values.myname }}
+=======
+employee:
+  name: {{ .Values.myname }}
+  labels:
+     {{ include "test.labels" . }}
+  conatiner:
+      {{- include "container.details" . | nindent 8}}
+>>>>>>> 1a79b179c4bc70422895a6ea139986d75d119b28
