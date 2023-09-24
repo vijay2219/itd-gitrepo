@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v1             ##this will create a directory with app.properties file with content in configmaps
 kind: Pod
 metadata:
   name: my-configfile-pod
