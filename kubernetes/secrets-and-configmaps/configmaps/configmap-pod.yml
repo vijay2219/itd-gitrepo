@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v1              ####we usually dont do this in pods as pods cant be restarted after applying changes, we do it in deployment
 kind: Pod
 metadata:
     name: ip-app-cm
