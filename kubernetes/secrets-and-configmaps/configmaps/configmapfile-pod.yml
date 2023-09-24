@@ -14,4 +14,4 @@ spec:
   volumes: 
   - name: configfilevolume
     configmap:
-        name: 
+        name: my-configmap-file
