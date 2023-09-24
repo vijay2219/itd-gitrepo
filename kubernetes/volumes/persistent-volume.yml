@@ -10,3 +10,7 @@ spec:
     storage: 2Gi
   hostPath:
     path: '/home/ubuntu/'
+
+
+##A PV of a particular storageclass can only be bound to PVCs requesting that class.
+###A PV with no storageClassName has no class and can only be bound to PVCs that request no particular class
