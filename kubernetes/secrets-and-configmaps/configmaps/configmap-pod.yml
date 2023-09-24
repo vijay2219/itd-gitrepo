@@ -9,7 +9,7 @@ spec:
     ports:
     - containerPort: 80
     env:
-    - name: ENVIRONMENT
+    - name: ENVIRONMENT          ###value present in env goes toENVIRONMENT
       valueFrom:
           configMapKeyRef:
               name: my-cm    ###configmaps name
