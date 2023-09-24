@@ -5,7 +5,7 @@ metadata:
 spec:
   storageClassName: local      ##staorageclassname should be same in both persistentvolume and pvc
   accessModes:
-  - ReadWriteMany              ###should accessmode same as pv
+  - ReadWriteMany              ###should accessmode same as pv? yes
   resources:
     requests:
       storage: 1Gi
