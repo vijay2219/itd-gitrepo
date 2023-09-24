@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  storageClassName: local      ##staorageclassname should be same in both persistentvolume and pvc
+  accessModes:
+  - ReadWriteMany              ###should accessmode same as pv
+  resources:
+    requests:
+      storage: 1Gi
