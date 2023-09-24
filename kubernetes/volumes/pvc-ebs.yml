@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: my-pvc-ebs
 spec:
-  storageClassName: my-sc-dynamic-ebs
+  storageClassName: my-sc-dynamic-ebs           ###the pvc will be claimed on dynamic-ebs.yml, In pv we mention stoarge class ,but in this we create storage class and give its name in pvc 
   accessModes:
   - ReadWriteOnce
   resources:
