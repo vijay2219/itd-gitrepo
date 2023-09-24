@@ -9,7 +9,7 @@ spec:
   capacity:
     storage: 2Gi
   hostPath:
-    path: '/home/ubuntu/'
+    path: '/home/ubuntu/'     ###a folder gets created and managed by k8s, if not given it takes its own path
 
 
 ##A PV of a particular storageclass can only be bound to PVCs requesting that class.
