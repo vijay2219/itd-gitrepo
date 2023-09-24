@@ -9,10 +9,10 @@ spec:
     ports:
     - containerPort: 80
     volumeMounts:
-    - name: hostpath-vol
+    - name: hostpath-vol                   ###should give the same name as given in the volumes to mount
       mountPath: /app/container-volume
   volumes: 
-  - name: hostpath-vol
+  - name: hostpath-vol                       #can give any name here
     hostPath: 
        path: /home/ubuntu/pod_data
        type: DirectoryOrCreat
