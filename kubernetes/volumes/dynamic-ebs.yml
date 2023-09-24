@@ -1,0 +1,11 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: my-sc-dynamic-ebs
+provisioner: kubernetes.io/aws-ebs    ##MANDATORY,who is providing storage
+parameters:
+  type: gp2
+  iopsPerGB: "10"
+  fsType: ext4
+allowVolumeExpansion: true   
+reclaimPolicy: Retain              ##even if you delete storage class EBS volume will still be there
