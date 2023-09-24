@@ -3,9 +3,9 @@ kind: PersistentVolume
 metadata:
   name: my-pv
 spec:
-  storageClassName: local
+  storageClassName: local   ##i am using specified amount of memory from my cluster
   accessModes:
-  - ReadWriteMany
+  - ReadWriteMany            ##accessmode tells how a volume can can be accessed, in this case this volume can be readand write from multiple nodes
   capacity:
     storage: 2Gi
   hostPath:
