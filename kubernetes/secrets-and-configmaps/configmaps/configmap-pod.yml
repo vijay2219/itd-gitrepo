@@ -12,10 +12,10 @@ spec:
     - name: ENVIRONMENT
       valueFrom:
           configMapKeyRef:
-              name: my-cm
+              name: my-cm    ###configmaps name
               key: env
     - name: APP
       valueFrom:
           configMapKeyRef:
-              name: my-cm
+              name: my-cm         ###configmaps name
               key: app   
