@@ -4,4 +4,4 @@ metadata:
     name: pod-quota 
 spec:
     hard: 
-       count/pods: "2"  
+       count/pods: "2"  ## MAX pods in the namespace
