@@ -4,5 +4,5 @@ metadata:
     name: pod-quota 
 spec:
     hard: 
-       request.memory: "64Mi" 
-       limits.memory: "128Mi"
+       request.memory: "64Mi"   ##  MAX request made by any object in namespace
+       limits.memory: "128Mi"    ## OVERALL limit of memory in the namespace
