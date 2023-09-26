@@ -10,7 +10,7 @@ spec:
     image: registry.k8s.io/busybox
     args:
     - /bin/sh
-    - -c
+    - -c                                                                   ### -c is a flag to mention to take the commands
     - touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600
     livenessProbe:
       exec:
