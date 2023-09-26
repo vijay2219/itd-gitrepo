@@ -34,4 +34,5 @@ spec:
         app: php-app      ### SELECTOR WE USE INSIDE SERVICES IS 100% LABEL OF PODS
     ports: 
       - port: 80
+## We dont mention targetPort here as k8s finds it as we have selected a pod using label
         
