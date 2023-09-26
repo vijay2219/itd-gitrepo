@@ -31,7 +31,7 @@ metadata:
     name: php-app-ci
 spec:  
     selector:
-        app: php-app
+        app: php-app      ### SELECTOR WE USE INSIDE SERVICES IS 100% LABEL OF PODS
     ports: 
       - port: 80
         
