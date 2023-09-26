@@ -1,0 +1,18 @@
+apiVersion: autoscaling/v2 
+kind: HorizontalPodAutoscaler 
+metadata: 
+    name: my-hpa
+spec: 
+    scaleTargetRef:             ##Which controller we use to achieve or create this autoscaler
+        apiVersion: apps/v1
+        kind: Deployment
+        name: main-app-with-hpa 
+    minReplicas: 1
+    maxReplicas: 10 
+    metrics:
+    - type: Resource 
+      resource: 
+          name: cpu 
+          target: 
+             type: Utilization 
+             averageUtilization: 80
