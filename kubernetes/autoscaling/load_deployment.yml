@@ -18,4 +18,5 @@ spec:
         command: 
         - /bin/sh 
         - -c 
-        - "while true; do wget -q http://php-app-ci; done"
+        - "while true; do wget -q http://php-app-ci; done"       
+ ### WE use name of service to put load on deployment with one replica  create one more as cpu utilization crossed till cpu comes to desired
