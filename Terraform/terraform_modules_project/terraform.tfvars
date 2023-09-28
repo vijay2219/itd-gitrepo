@@ -1,0 +1,6 @@
+instance_type= "t2.micro"
+key_name= "practicekey"
+bucket_name= "my-s3-backend-143225"
+sse_algorithm= "AES256"
+dynamodb_name= "dynamo-statelocking-table"
+hash_key= "LockID"
