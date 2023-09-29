@@ -10,4 +10,4 @@ root_inline_commands = ["sudo apt update -y",
                         "sudo apt install -y nginx git jq",
                         "echo 'This is remote-exec inline command example' > remote-exec.txt"]
 root_inline_script = ["sudo chmod 500 /home/ubuntu/install.sh", "sudo bash /home/ubuntu/install.sh"]
-#root_sg_name = "allow_ssh_http_https"
+root_sg_name = "allow_ssh_http_https"

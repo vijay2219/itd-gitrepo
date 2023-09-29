@@ -38,6 +38,6 @@ variable "root_inline_script" {
     type = list 
 }
 
-#variable "root_sg_name" {
- #   type = string 
-#}
+variable "root_sg_name" {
+    type = string 
+}
