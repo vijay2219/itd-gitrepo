@@ -49,3 +49,8 @@ module "remote_exec_script" {
     ec2_pem = var.root_key_path
     inline_commands = var.root_inline_script
 }
+
+module "create_sg" {
+    source = "./modules/create_sg"
+    sg_name = var.root_sg_name
+}
