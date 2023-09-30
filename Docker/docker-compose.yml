@@ -1,8 +1,8 @@
-version: "3.8"
-services: 
+version: "3.8"  ##This version depends on docker version
+services:       ##MENTION THE CONTAINER SPECS , containers
    singlestage:
-      build: 
-         context: .
+      build:     ## create a CONTAINER using docker file we use BUILD
+         context: .                                        
          dockerfile: Dockerfile_single
       ports:
          - "8090:3070"
@@ -15,7 +15,7 @@ services:
       networks:
          - custom_bridge   
    redis:
-      image: redis:latest
+      image: redis:latest        ### CONTAINER directly from image instead of docker file use IMAGE
       volumes: 
         - redis-data:/var/lib/redis
       networks:
@@ -26,14 +26,24 @@ services:
          - "8080:8080"
          - "50000:50000"  
       volumes:
-         - jenkins_home:/var/jenkins_home
+         - jenkins_home:/var/jenkins_home  #mounting a volume inside container, normally -v NAME_OF_VOLUME_INSIDE_HOSTMACHINE:PATH INSIDE CONTAINER
       networks:
          - custom_bridge
 volumes:
     jenkins_home:
-       driver: local
+       driver: local       ## to create a volume in host machine, DRIVER tells what type of volume you want to create
     redis-data:
        driver: local
 networks:
     custom_bridge:
-       driver: bridge 
+       driver: bridge        # driver is used to tell which type of network you want to create
+
+##if there is docker file in the pwd then we use
+# build: .
+
+##if the docker file is in some path
+# build:  
+#    context: .    i.e where we need to build
+#     docker_file: location od Dockerfile
+
+##BUILD CONTEXT IN DOCKER: WHERE WE WANT TO BUILD
