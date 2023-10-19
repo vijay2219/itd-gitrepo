@@ -4,4 +4,4 @@ metadata:
   name: my-configmap-file
 data:
   app.properties: |
-    env: production
+    env: production ##it will create a file with name env
