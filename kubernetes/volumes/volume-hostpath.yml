@@ -15,4 +15,4 @@ spec:
   - name: hostpath-vol                       #can give any name here
     hostPath: 
        path: /home/ubuntu/pod_data
-       type: DirectoryOrCreat
+       type: DirectoryOrCreate
