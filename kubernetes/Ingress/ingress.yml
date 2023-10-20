@@ -14,7 +14,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: cip-ipapp
+            name: cip-ipapp   ##Give the service name to which you want to connect it to
             port:
               number: 30002
       - path: /name
