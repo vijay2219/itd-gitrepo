@@ -6,13 +6,13 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
-  rules:
+  rules:                     #********
   - host: ingress.example.com    ##when an request comes from this host route the traffic to backend service i.e cip-app with port 30002(target port)
     http:
       paths:
       - path: /
-        pathType: Prefix
-        backend:
+        pathType: Prefix         #*********
+        backend:                 #*****
           service:
             name: cip-ipapp   ##Give the service name to which you want to connect it to
             port:
