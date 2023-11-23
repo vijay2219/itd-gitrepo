@@ -1,0 +1,21 @@
+# TO TAINT kubectl taint nodes node1 key1=value1:NoSchedule
+# TO UNTAINT kubectl taint nodes node1 key1=value1:NoSchedule-
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  tolerations:
+  - key: "example-key"
+    operator: "Exists"
+    effect: "NoSchedule"
+#tolerations:
+#- key: "key1"
+ # operator: "Exists"
+ # effect: "NoSchedule" 
